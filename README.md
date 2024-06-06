@@ -12,39 +12,39 @@ Este proyecto es una implementación de un sistema de autenticación y autorizac
 
 1. Clona el repositorio en tu máquina local:
 
-    ```sh
-    git clone https://github.com/Benjax14/login-JWT-SpringBoot.git
-    cd login-JWT-SpringBoot
-    ```
+   ```sh
+   git clone https://github.com/Benjax14/login-JWT-SpringBoot.git
+   cd login-JWT-SpringBoot
+   ```
 
 2. Configura tu base de datos en el archivo `application.properties`:
 
-    ```properties
-    spring.datasource.url=jdbc:postgresql://localhost:5432/your-database
-    spring.datasource.username=your-username
-    spring.datasource.password=your-password
-    spring.jpa.hibernate.ddl-auto=update
-    ```
+   ```properties
+   spring.datasource.url=jdbc:postgresql://localhost:5432/your-database
+   spring.datasource.username=your-username
+   spring.datasource.password=your-password
+   spring.jpa.hibernate.ddl-auto=update
+   ```
 
 3. Crea un archivo `.env` en la raíz del proyecto para almacenar las variables de entorno necesarias:
 
-    ```env
-    SPRING_DATASOURCE_USERNAME=root
-    SPRING_DATASOURCE_PASSWORD=1234
-    SPRING_DATASOURCE_DB=db
-    ```
+   ```env
+   SPRING_DATASOURCE_USERNAME=root
+   SPRING_DATASOURCE_PASSWORD=1234
+   SPRING_DATASOURCE_DB=db
+   ```
 
 4. Instala las dependencias y construye el proyecto usando Maven:
 
-    ```sh
-    mvn clean install
-    ```
+   ```sh
+   mvn clean install
+   ```
 
 5. Inicia la aplicación:
 
-    ```sh
-    mvn spring-boot:run
-    ```
+   ```sh
+   mvn spring-boot:run
+   ```
 
 ## Endpoints
 
@@ -55,15 +55,15 @@ Este proyecto es una implementación de un sistema de autenticación y autorizac
 - **Descripción:** Registra un nuevo usuario en el sistema.
 - **Cuerpo de la petición:**
 
-    ```json
-    {
-        "username": "correo@gmail.com",
-        "password": "password123",
-		"firstname": "Benjamin",
-		"lastname":  "Contreras",
-		"country": "Chile"
-    }
-    ```
+  ```json
+  {
+    "username": "correo@gmail.com",
+    "password": "password123",
+    "firstname": "Benjamin",
+    "lastname": "Contreras",
+    "country": "Chile"
+  }
+  ```
 
 ### Inicio de Sesión
 
@@ -72,20 +72,20 @@ Este proyecto es una implementación de un sistema de autenticación y autorizac
 - **Descripción:** Autentica al usuario y devuelve un JWT.
 - **Cuerpo de la petición:**
 
-    ```json
-    {
-        "username": "existinguser",
-        "password": "password123"
-    }
-    ```
+  ```json
+  {
+    "username": "existinguser",
+    "password": "password123"
+  }
+  ```
 
 - **Respuesta:**
 
-    ```json
-    {
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
-    }
-    ```
+  ```json
+  {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+  }
+  ```
 
 ### Ruta Protegida
 
@@ -94,9 +94,9 @@ Este proyecto es una implementación de un sistema de autenticación y autorizac
 - **Descripción:** Accede a esta ruta solo con un JWT válido.
 - **Encabezado de la petición:**
 
-    ```http
-    Authorization: Bearer <token>
-    ```
+  ```http
+  Authorization: Bearer <token>
+  ```
 
 ## Estructura del Proyecto
 

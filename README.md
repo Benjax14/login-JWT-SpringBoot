@@ -29,9 +29,9 @@ Este proyecto es una implementación de un sistema de autenticación y autorizac
 3. Crea un archivo `.env` en la raíz del proyecto para almacenar las variables de entorno necesarias:
 
     ```env
-SPRING_DATASOURCE_USERNAME=root
-SPRING_DATASOURCE_PASSWORD=1234
-SPRING_DATASOURCE_DB=db
+    SPRING_DATASOURCE_USERNAME=root
+    SPRING_DATASOURCE_PASSWORD=1234
+    SPRING_DATASOURCE_DB=db
     ```
 
 4. Instala las dependencias y construye el proyecto usando Maven:
